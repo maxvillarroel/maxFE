@@ -4,8 +4,9 @@
     :subtitle='account.username'
     class="pa-4 w-50">
     <v-divider/>
-        <v-list>
+        <v-list class="bg-background">
             <v-list-item
+                color="background"
                 title="First Name"
                 :subtitle="account.first_name"
             ></v-list-item>
@@ -19,7 +20,8 @@
             ></v-list-item>
         </v-list>
         <v-card-actions>
-            <v-btn to="/profile/edit" color='primary' variant="elevated" prepend-icon="mdi-account-edit">
+            <v-spacer/>
+            <v-btn to="/profile/edit" prepend-icon="mdi-account-edit">
                 Edit
             </v-btn>
         </v-card-actions>

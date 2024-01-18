@@ -9,16 +9,23 @@ const maxBrand = {
     surface: '#6C8FA6', // adobe
     primary: '#7D541A', //pick
     accent: '#E6A54D', // adobe
-    error: '#EC4643', //Imperial Red
-    info: '#5CB0E6', // adobe
-    success: '#277C30', //Office Green
-    warning: '#C96911', // Alloy Orange
+    error: '#B22A38',
+    info: '#3e90cc',
+    success: '#28af60',
+    warning: '#DC8E27',
   },
 }
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
-    // ... your configuration
+    ssr: true,
+    defaults: {
+      global: { variant: 'outlined'},
+      VSheet: { variant: 'flat'},
+      VList: { variant: 'text'},
+      VListItem: { variant: 'text'},
+      VCard: { VCardActions: { VBtn: { variant: 'outlined' } } }
+    },
     theme: {
       defaultTheme: 'maxBrand',
       themes: {
